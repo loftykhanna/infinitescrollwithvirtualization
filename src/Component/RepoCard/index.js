@@ -15,7 +15,7 @@ const RepoCard = ({ repoDetails = {}, orgname = "goDaddy" }) => {
       <p class="description">Open Issues : {repoDetails?.open_issues_count}</p>
       <p class="description">Watcher : {repoDetails?.watchers_count}</p>
       <button class="btn">
-        <a href={repoDetails?.html_url} target="_blank">
+        <a href={repoDetails?.html_url} target="_blank" rel="noreferrer">
           Go to Github Repo
         </a>
       </button>

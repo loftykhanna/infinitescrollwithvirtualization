@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React Virtualization with Infinite Scroll
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

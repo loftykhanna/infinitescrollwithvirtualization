@@ -1,5 +1,3 @@
-import classes from "./avatar.css";
-
 const Avatar = ({ name, imageUrl }) => {
   return (
     <>

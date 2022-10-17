@@ -36,8 +36,6 @@ export default function Repolist() {
   const [showModal, setShowModal] = useState(false);
   const [selectedRepo, setSelectedRepo] = useState(false);
 
-  const BATCH_COMMENTS = 30;
-
   // const [comments, setComments] = useState([]);
   const { outerRef, innerRef, items } = useVirtual({
     itemCount: CONSTANTS.TOTAL_COMMENTS,

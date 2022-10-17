@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {  Link, useParams
+import { useParams
 } from "react-router-dom";
 
 import {RepoCard} from '../../Component'
