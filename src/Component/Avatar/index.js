@@ -1,3 +1,4 @@
+import React from 'react';
 const Avatar = ({ name, imageUrl }) => {
   return (
     <>
