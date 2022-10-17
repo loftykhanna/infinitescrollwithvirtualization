@@ -53,7 +53,6 @@ export default function Repolist() {
   });
 
   const showRepoModal = (repo) => {
-    console.log("repo", repo);
     setSelectedRepo(repo);
     setShowModal(true);
   };
@@ -63,7 +62,6 @@ export default function Repolist() {
   };
 
   const renderRepoList = () => {
-    console.log(items, repolist);
     return items.map(({ index, measureRef }) => {
       const repo = repolist[index];
       return (
@@ -73,6 +71,7 @@ export default function Repolist() {
             measureRef={measureRef}
             repo={repo}
             onSelectRepo={showRepoModal}
+            key={repo?.id}
           />
         </>
       );
@@ -82,7 +81,7 @@ export default function Repolist() {
   return (
     <div
       className="outer"
-      style={{ height: "500px", overflow: "auto" }}
+      style={{ height: "100vh", overflow: "auto" }}
       ref={outerRef}
     >
       {showModal && (
