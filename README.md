@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# React Virtualization with Infinite Scroll
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## To Start Project
 
-In the project directory, you can run:
+Clone the project - and then
+ ```npm install``` and ```npm start```. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm start`
+ ## About the project:
+ - This project is harcoded for specific company - godaddy.
+ - Have implemented infinite scroll for loading list of repos - items per page is 30
+ - Have implemented virtualization for list view to enhance performance with large dataset
+ ![image](https://user-images.githubusercontent.com/10628479/196141767-8d6a73fe-cc64-4857-a37e-1e647da35440.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ - Also has handled the case, while scrolling api call is made for data that is not fetched- Once data is fetched from api,we keep it in memory and dont make the api call again for same page no. 
+ - When you click on Repo-name -> it moved to another page in new tab to show details. Details are fetched again from api on new page.
+![image](https://user-images.githubusercontent.com/10628479/196140299-c6904647-a0a3-4e9a-9109-0405be7ea7f6.png)
+- When we click on show details - no api call is made and details are shown in modal. As we already have required information from ``` https://api.github.com/orgs/godaddy/repos ``, another api call can be avoided as data is shown on same page
+![image](https://user-images.githubusercontent.com/10628479/196141042-3b09a411-9765-4f48-9657-656155318c0a.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ ## Choices made
+ - Only external packages used in repo is react-cool-virtual. I was confused between react-virtualized and react-cool-virtual. Specifically for this usecase react-cool-virtual make more sense its extremely light weight.
+ - <img width="1385" alt="image" src="https://user-images.githubusercontent.com/10628479/196144494-fc56ac99-21c0-4727-8cf2-e148d42aed23.png">
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
